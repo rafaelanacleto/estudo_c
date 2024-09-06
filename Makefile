@@ -10,7 +10,7 @@ LDFLAGS =
 # Makefile settings - Can be customized.
 APPNAME = SimpleList
 EXT = .cpp
-SRCDIR = src
+SRCDIR = /home/rafael/repos/estudo_c/src
 OBJDIR = obj
 
 ############## Do not change anything from here downwards! #############

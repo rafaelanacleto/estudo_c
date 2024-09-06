@@ -2,13 +2,17 @@
 using namespace std;
 
 void print_menu(string name);
+void print_list();
+void add_item();
+void delete_item();
+void search_item();
 
 int main(int arg_count, char *args[]) {
 
     if(arg_count > 1) {
         string name = args[1];
-        cout << "name is " << name << endl;  
-        print_menu("Rafael"); 
+        cout << "Welcome  " << name << endl;  
+        print_menu(name); 
     }
     else {
          cout << "No Arguments" << endl;
@@ -30,5 +34,9 @@ void print_menu(string name) {
     cout << "**********************************************************\n" << endl;
 
     cin >> choice;
-
+    
+    if(choice == 5) {
+    	exit(0);    
+    }
+    
 }

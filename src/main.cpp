@@ -114,7 +114,7 @@ void delete_item()
 
     if (list.size())
     {
-        for (int i = 0; i < list.size(); i++)
+        for (int i = 0; i < int(list.size()); i++)
         {
             cout << i << " - " << list[i] << "\n";
         }
@@ -128,7 +128,7 @@ void delete_item()
     }
 
     list.erase(list.begin() + index);
-    for (int i = 0; i < list.size(); i++)
+    for (int i = 0; i < int(list.size()); i++)
     {
         cout << i << " - " << list[i] << "\n";
     }

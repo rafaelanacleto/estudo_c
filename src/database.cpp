@@ -1,21 +1,45 @@
 #include <iostream>
 #include "include/database.h"
 
-    void Database::write() {
+void Database::write(vector<string> list)
+{
 
-        ofstream db;
-        db.open("db/lists.sl");
+    ofstream db;
+    db.open("db/lists.sl");
 
-        if(db.is_open()) {
-            db << "1\n2\n3\n4\n5\n";
+    if (db.is_open())
+    {
+        for (int i = 0; i < int(list.size()); i++)
+        {
+            db << i << " - " << list[i] << "\n";
         }
-        else {
-            cout << "Cannot open file for writing.";
-        }
-
-        db.close();
+    }
+    else
+    {
+        cout << "Cannot open file for writing.";
     }
 
-    void Database::read() {
+    db.close();
+}
 
+void Database::read()
+{
+    ifstream db;
+    string line;
+
+    db.open("db/lists.sl");
+
+    if (db.is_open())
+    {
+        while (getline(db, line, '\n'))
+        {
+            cout << line << "\n";
+        }
     }
+    else
+    {
+        cout << "Cannot open file for writing.";
+    }
+
+    db.close();
+}

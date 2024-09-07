@@ -1,22 +1,24 @@
 #include "include/list.h"
 #include "include/database.h"
 
-int main(int arg_count, char *args[]) {
+int main(int arg_count, char *args[])
+{
 
-    if (arg_count > 1) {
+    List simpleList;
+    Database data;
 
-        List simpleList;
-        simpleList.name = string(args[1]);        
+    if (arg_count > 1)
+    {
+
+        simpleList.name = string(args[1]);
         simpleList.print_menu();
-
-    } else {
+        data.write(simpleList.list);
+        data.read();
+    }
+    else
+    {
         cout << "No Arguments" << endl;
     }
-
-
-    Database data;
-    data.write();
-
 
     return 0;
 }

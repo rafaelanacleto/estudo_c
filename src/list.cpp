@@ -19,7 +19,7 @@ void List::print_menu()
 
     if (choice == 6)
     {
-        exit(0);
+        return;
     }
     else if (choice == 2)
     {

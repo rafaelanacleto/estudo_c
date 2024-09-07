@@ -4,23 +4,24 @@
 
 using namespace std;
 
-class Database {
+class Database
+{
 
-    private:
-    protected:
-    public:
+private:
+protected:
+public:
+    Database()
+    {
+        // contructor
+    }
+    ~Database()
+    {
+        // destructor
+    }
 
-        Database() {
-            //contructor
-        }
-        ~Database() {
-            //destructor
-        }
+    vector<string> list;
 
-        vector<string> list;
-        
-        //métodos
-        void write();
-        void read();
-        
+    // métodos
+    void write(vector<string> list);
+    void read();
 };

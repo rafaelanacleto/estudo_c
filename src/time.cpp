@@ -14,5 +14,13 @@ Time::Time() {
 // Configura novo valor de Time utiizando a hora universal;
 void Time::setTime(int h, int m, int s) {
 
-    hour = (h >= 0 && h < 24) ? h : 0; // valida hora
+    hour   = (h >= 0 && h < 24) ? h : 0;    // valida hora
+    minute = (m >= 0 && m < 60) ? m : 0;    // valida minutos
+    second = (s >= 0 && s < 60) ? s : 0;    // valida segundos
+}
+
+// Imprime a hroa no formato de data/hora atual (HH:MM:SS)
+void Time::printUniversal() {
+    cout << setfill('0') << setw(2) << hour << ":"
+            << setw(2) << minute << ":" << setw(2) << second;
 }

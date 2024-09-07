@@ -1,6 +1,6 @@
 #include "include/list.h"
 
-void print_menu()
+void List::print_menu()
 {
     int choice;
 
@@ -43,7 +43,7 @@ void print_menu()
     }
 }
 
-void add_item()
+void List::add_item()
 {
 
     cout << "\n";
@@ -61,7 +61,7 @@ void add_item()
     print_menu();
 }
 
-void print_list()
+void List::print_list()
 {
 
     cout << "\n\n";
@@ -77,7 +77,7 @@ void print_list()
     print_menu();
 }
 
-void delete_item()
+void List::delete_item()
 {
 
     int index = 0;
@@ -86,12 +86,12 @@ void delete_item()
 
     if (list.size())
     {
-        for (unsigned int i = 0; i < int(list.size()); i++)
+        for (int i = 0; i < int(list.size()); i++)
         {
             cout << i << " - " << list[i] << "\n";
         }
 
-        cout << "-> Select an item index number to delete:\n";
+        cout << "-> Select an item index number to delete: ";
         cin >> index;
     }
     else
@@ -100,12 +100,13 @@ void delete_item()
     }
 
     list.erase(list.begin() + index);
-    for (unsigned int i = 0; i < int(list.size()); i++)
+    cout << "\n";
+    for (int i = 0; i < int(list.size()); i++)
     {
         cout << i << " - " << list[i] << "\n";
     }
-
-    cout << "Item deleting success! \n\n\n";
+    cout << "\n";
+    cout << "Item deleting success! \n\n";
 
     print_menu();
 

@@ -11,10 +11,10 @@ class List {
     public:
 
         List() {
-
+            //contructor
         }
         ~List() {
-            
+            //destructor
         }
 
         vector<string> list;
